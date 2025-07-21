@@ -168,5 +168,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // アコーディオン機能
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+
+        header.addEventListener('click', () => {
+            // 他のアコーディオンを閉じる
+            accordionItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                    otherItem.querySelector('.accordion-content').style.padding = '0 1.5rem';
+                }
+            });
+
+            // クリックしたアコーディオンの開閉
+            item.classList.toggle('active');
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.padding = '1.5rem';
+            } else {
+                content.style.maxHeight = null;
+                content.style.padding = '0 1.5rem';
+            }
+        });
+    });
 });
 
