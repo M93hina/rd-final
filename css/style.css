@@ -185,6 +185,21 @@ a {
     text-align: center;
 }
 
+.hero-with-bg {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/picture/sidewalk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-with-bg .hero-title,
+.hero-with-bg .hero-description {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
@@ -465,6 +480,10 @@ a {
     }
 
     /* ヒーロー */
+    .hero-with-bg {
+        background-attachment: scroll;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
