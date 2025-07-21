@@ -1,0 +1,302 @@
+/* 手続き・届出ページ専用スタイル */
+
+/* ページヘッダー */
+.page-header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.page-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 手続きカードグリッド */
+.procedures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* 手続きカード */
+.procedure-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.procedure-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.procedure-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.procedure-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.procedure-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.procedure-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.status-online {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-office {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-both {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.procedure-description {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.procedure-details {
+    margin-bottom: 2rem;
+}
+
+.procedure-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.procedure-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.procedure-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: flex-start;
+}
+
+.procedure-list li:last-child {
+    border-bottom: none;
+}
+
+.procedure-list li::before {
+    content: "✓";
+    color: #10b981;
+    font-weight: bold;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.procedure-footer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.procedure-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.procedure-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+.procedure-btn.btn-secondary {
+    background-color: #6b7280;
+}
+
+.procedure-btn.btn-secondary:hover {
+    background-color: #4b5563;
+}
+
+.procedure-info {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* 重要な注意事項セクション */
+.important-notice {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 1px solid #f59e0b;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.important-notice h3 {
+    color: #92400e;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.important-notice h3::before {
+    content: "";
+    margin-right: 0;
+    font-size: 1.5rem;
+}
+
+.important-notice ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    color: #92400e;
+}
+
+.important-notice li {
+    margin: 0.5rem 0;
+}
+
+/* オンライン手続きセクション */
+.online-section {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.online-section h3 {
+    color: #1e40af;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.online-section h3::before {
+    content: "";
+    margin-right: 0;
+    font-size: 1.5rem;
+}
+
+.online-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.online-step {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #bfdbfe;
+}
+
+.step-number {
+    background: #3b82f6;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem auto;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.step-title {
+    font-weight: 600;
+    color: #1e40af;
+    font-size: 0.9rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .procedures-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .procedure-card {
+        padding: 1.5rem;
+    }
+    
+    .procedure-footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+    
+    .procedure-btn {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .online-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .procedure-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .procedure-status {
+        margin-left: 0;
+    }
+    
+    .important-notice,
+    .online-section {
+        padding: 1.5rem;
+    }
+}

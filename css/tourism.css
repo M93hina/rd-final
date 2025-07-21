@@ -37,24 +37,6 @@
     opacity: 0.9;
 }
 
-/* 地図セクション */
-.city-map-section {
-    padding: 4rem 0;
-    background-color: #f9fafb;
-}
-
-.map-container {
-    max-width: 100%;
-}
-
-.map-display {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
-    width: 100%;
-}
 
 /* 観光スポット */
 .tourism-spots {
@@ -389,9 +371,6 @@
         font-size: 2rem;
     }
 
-    .map-display {
-        min-height: 300px;
-    }
 
     .spots-grid {
         grid-template-columns: 1fr;
