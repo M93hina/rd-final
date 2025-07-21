@@ -5,13 +5,42 @@
     box-sizing: border-box;
 }
 
+/* フォント定義 */
+@font-face {
+    font-family: 'Kazesawa';
+    src: url('../assets/font/Kazesawa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazesawa';
+    src: url('../assets/font/Kazesawa-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazesawa';
+    src: url('../assets/font/Kazesawa-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazesawa';
+    src: url('../assets/font/Kazesawa-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* 基本スタイル */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "MS Pゴシック", sans-serif;
+    font-family: 'Kazesawa', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "MS Pゴシック", sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;

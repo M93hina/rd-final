@@ -25,6 +25,16 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-icon {
+    width: 90px;
+    height: 90px;
+    filter: brightness(0) invert(1);
 }
 
 .hero-description {
