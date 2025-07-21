@@ -127,8 +127,12 @@
 }
 
 .service-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.service-icon img {
+    width: 48px;
+    height: 48px;
 }
 
 .service-title {
