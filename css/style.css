@@ -1076,7 +1076,76 @@ button:focus {
     }
 }
 
+/* パンくずリスト */
+.breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    margin-left: 0.5rem;
+    color: #6b7280;
+}
+
 /* アコーディオン */
+
+/* 事業者向けページセクション */
+.business-section {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.business-section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #2563eb;
+}
+
+.business-section-title .accordion-icon {
+    margin-right: 1rem;
+}
+
+.business-section-content h4 {
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.business-section-content p,
+.business-section-content ul {
+    margin-bottom: 1rem;
+}
+
+.business-section-content ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
 .accordion {
     max-width: 800px;
     margin: 2rem auto;
