@@ -1219,3 +1219,173 @@ button:focus {
     list-style-position: inside;
     padding-left: 1rem;
 }
+
+/* ゴミ出し情報テーブルスタイル */
+.table-responsive {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.waste-schedule-table {
+    width: 100%;
+    min-width: 800px;
+    background-color: white;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.waste-schedule-table thead {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.waste-schedule-table th {
+    padding: 1rem 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.waste-schedule-table th:last-child {
+    border-right: none;
+}
+
+.waste-schedule-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.waste-schedule-table tbody tr:nth-child(odd) {
+    background-color: #f8fafc;
+}
+
+.waste-schedule-table tbody tr:hover {
+    background-color: #e0f2fe;
+}
+
+.waste-schedule-table td {
+    padding: 1rem 0.75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    line-height: 1.5;
+}
+
+.waste-schedule-table td:last-child {
+    border-right: none;
+}
+
+.waste-schedule-table td:first-child {
+    font-weight: 600;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.waste-schedule-table small {
+    color: #64748b;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.waste-schedule-table td:nth-child(2) {
+    text-align: center;
+    font-weight: 600;
+    color: #dc2626;
+}
+
+.waste-schedule-table td:nth-child(3) {
+    color: #059669;
+    font-weight: 500;
+}
+
+.waste-schedule-table td:nth-child(4) {
+    text-align: center;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.waste-schedule-table td:nth-child(5) {
+    color: #7c2d12;
+    font-size: 0.85rem;
+}
+
+/* 収集地区情報スタイル */
+.collection-area-info {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.collection-area-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.collection-area-info li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.collection-area-info li:last-child {
+    border-bottom: none;
+}
+
+.collection-area-info li::before {
+    content: '🏘️';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+}
+
+.collection-area-info strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .table-responsive {
+        margin: 1rem -1rem;
+        border-radius: 0;
+    }
+    
+    .waste-schedule-table {
+        min-width: 700px;
+        font-size: 0.8rem;
+    }
+    
+    .waste-schedule-table th,
+    .waste-schedule-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .collection-area-info {
+        margin: 1rem -1rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .waste-schedule-table {
+        min-width: 600px;
+        font-size: 0.75rem;
+    }
+    
+    .waste-schedule-table th,
+    .waste-schedule-table td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .waste-schedule-table small {
+        font-size: 0.7rem;
+    }
+}
