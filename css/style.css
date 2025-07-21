@@ -1056,3 +1056,78 @@ button:focus {
         background: #fff;
     }
 }
+
+/* アコーディオン */
+.accordion {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #f9fafb;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #f3f4f6;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.accordion-title {
+    flex-grow: 1;
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 1.5rem;
+}
+
+.accordion-content p,
+.accordion-content ul,
+.accordion-content h4 {
+    margin-bottom: 1rem;
+}
+
+.accordion-content h4 {
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 1.5rem;
+}
+
+.accordion-content ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
