@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>観光情報 - 双月市公式ホームページ</title>
+    <meta name="description" content="双月市の観光スポット、イベント、グルメ情報をご紹介します。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon/rd-icon.svg">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/icon/rd-icon.svg" alt="双月市ロゴ" class="logo-image">
+                    <h1 class="city-name">双月市</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="メニューを開く">
+                        <img src="images/icon/menu.svg" alt="メニュー" class="nav-toggle-icon">
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="kurashi.html">くらしの情報</a></li>
+                        <li><a href="procedures.html">手続き・届出</a></li>
+                        <li><a href="facilities.html">公共施設</a></li>
+                        <li><a href="tourism.html" class="current">観光情報</a></li>
+                        <li><a href="business.html">事業者向け</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- ページヘッダー -->
+        <section class="page-hero tourism-hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1 class="page-title">観光情報</h1>
+                <p class="page-description">双月市の魅力的な観光スポットやイベント情報をご紹介します</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 市内マップ -->
+            <section class="city-map-section">
+                <h2 class="section-title">双月市観光マップ</h2>
+                <div class="map-container">
+                    <div id="city-map" class="map-display">
+                        <!-- ここにMAP APIが入ります -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 観光スポット -->
+            <section class="tourism-spots">
+                <h2 class="section-title">人気観光スポット</h2>
+                <div class="spots-grid">
+                    <div class="spot-card featured-spot">
+                        <div class="spot-image">
+                            <img src="images/picture/big-photo0000-0586.jpg" alt="双月湖の美しい風景" class="spot-img">
+                            <span class="spot-category">自然</span>
+                        </div>
+                        <div class="spot-content">
+                            <h3 class="spot-title">双月湖</h3>
+                            <p class="spot-description">市のシンボルでもある美しい湖。四季折々の景色が楽しめ、特に夕日の美しさで有名です。</p>
+                            <div class="spot-info">
+                                <span class="spot-access">市中心部から車で15分</span>
+                                <span class="spot-time">見学自由</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spot-card">
+                        <div class="spot-image-placeholder">
+                            <span class="spot-category">歴史</span>
+                        </div>
+                        <div class="spot-content">
+                            <h3 class="spot-title">双月城跡</h3>
+                            <p class="spot-description">江戸時代に建てられた城の跡地。現在は公園として整備され、桜の名所としても親しまれています。</p>
+                            <div class="spot-info">
+                                <span class="spot-access">双月駅から徒歩10分</span>
+                                <span class="spot-time">9:00-17:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spot-card">
+                        <div class="spot-image-placeholder">
+                            <span class="spot-category">文化</span>
+                        </div>
+                        <div class="spot-content">
+                            <h3 class="spot-title">双月市美術館</h3>
+                            <p class="spot-description">地域の文化芸術の拠点。常設展では地元作家の作品を中心に展示しています。</p>
+                            <div class="spot-info">
+                                <span class="spot-access">市役所から徒歩5分</span>
+                                <span class="spot-time">10:00-18:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spot-card">
+                        <div class="spot-image-placeholder">
+                            <span class="spot-category">体験</span>
+                        </div>
+                        <div class="spot-content">
+                            <h3 class="spot-title">双月温泉</h3>
+                            <p class="spot-description">天然温泉が楽しめる日帰り温泉施設。地元の食材を使った料理も味わえます。</p>
+                            <div class="spot-info">
+                                <span class="spot-access">双月駅からバス20分</span>
+                                <span class="spot-time">11:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- アクセス情報 -->
+            <section class="access">
+                <h2 class="section-title">アクセス情報</h2>
+                <div class="access-content">
+                    <div class="access-methods">
+                        <div class="access-method">
+                            <h3 class="access-title">電車でお越しの場合</h3>
+                            <ul class="access-list">
+                                <li>JR双月線「双月駅」下車</li>
+                                <li>主要都市から約1時間30分</li>
+                                <li>駅から市内各所へバス・タクシー利用</li>
+                            </ul>
+                        </div>
+
+                        <div class="access-method">
+                            <h3 class="access-title">お車でお越しの場合</h3>
+                            <ul class="access-list">
+                                <li>双月IC下車、市街地まで約10分</li>
+                                <li>市役所周辺に無料駐車場あり</li>
+                                <li>観光スポットには専用駐車場完備</li>
+                            </ul>
+                        </div>
+
+                        <div class="access-method">
+                            <h3 class="access-title">バスでお越しの場合</h3>
+                            <ul class="access-list">
+                                <li>市内循環バス「双月号」運行中</li>
+                                <li>1日乗車券 500円でお得に移動</li>
+                                <li>主要観光地を効率よく巡回</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 観光案内所 -->
+            <section class="tourist-info">
+                <h2 class="section-title">観光案内所</h2>
+                <div class="info-content">
+                    <div class="info-details">
+                        <h3>双月市観光案内所</h3>
+                        <div class="info-item">
+                            <strong>所在地：</strong>双月市中央1-1-1（双月駅構内）
+                        </div>
+                        <div class="info-item">
+                            <strong>営業時間：</strong>9:00-18:00（年末年始を除く）
+                        </div>
+                        <div class="info-item">
+                            <strong>電話：</strong>012-345-6800
+                        </div>
+                        <div class="info-item">
+                            <strong>サービス：</strong>観光マップ配布、宿泊施設案内、イベント情報提供
+                        </div>
+                    </div>
+                    <div class="info-services">
+                        <h4>ご利用できるサービス</h4>
+                        <ul class="services-list">
+                            <li>観光パンフレット・マップの配布</li>
+                            <li>宿泊施設の紹介・予約サポート</li>
+                            <li>観光ルートのご提案</li>
+                            <li>レンタサイクルの貸出</li>
+                            <li>荷物の一時預かりサービス</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">双月市役所</h3>
+                    <address class="footer-address">
+                        〒123-4567<br>
+                        双月市中央1-1-1<br>
+                        電話：012-345-6789<br>
+                        FAX：012-345-6790
+                    </address>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">業務時間</h3>
+                    <p class="footer-text">
+                        月曜日～金曜日<br>
+                        午前8時30分～午後5時15分<br>
+                        （祝日・年末年始を除く）
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">関連リンク</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">双月市観光協会</a></li>
+                        <li><a href="#">双月市商工会</a></li>
+                        <li><a href="#">双月市教育委員会</a></li>
+                        <li><a href="#">個人情報保護方針</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 双月市. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
