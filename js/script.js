@@ -69,31 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
 
-    // スムーズスクロールの実装（古いブラウザ対応）
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // 内部リンクの場合のみスムーズスクロールを適用
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-    // スクロール時のアニメーションを削除（シンプルなホバー効果のみ）
 
     // ページトップへ戻るボタンの実装
     const createScrollTopButton = () => {
@@ -193,38 +168,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // パフォーマンス最適化：イベントリスナーのデバウンス
-    const debounce = (func, wait) => {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    };
-
-    // リサイズイベントのデバウンス
-    const debouncedResize = debounce(function() {
-        // リサイズ時の処理をここに追加
-        console.log('Window resized');
-    }, 250);
-
-    window.addEventListener('resize', debouncedResize);
-
-    // 初期化完了のログ
-    console.log('双月市公式ホームページが正常に読み込まれました');
 });
 
-// エラーハンドリング
-window.addEventListener('error', function(e) {
-    console.error('JavaScript エラーが発生しました:', e.error);
-});
-
-// 未処理のPromise拒否のハンドリング
-window.addEventListener('unhandledrejection', function(e) {
-    console.error('未処理のPromise拒否:', e.reason);
-    e.preventDefault();
-});
