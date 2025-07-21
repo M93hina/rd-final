@@ -1,0 +1,457 @@
+/* 観光ページ専用スタイル */
+.page-hero {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.tourism-hero {
+    background-image: 
+        linear-gradient(rgba(5, 150, 105, 0.8), rgba(4, 120, 87, 0.8)),
+        url('../images/picture/big-photo0000-0586.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(5, 150, 105, 0.3), rgba(4, 120, 87, 0.3));
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    font-size: 1.125rem;
+    opacity: 0.9;
+}
+
+/* 地図セクション */
+.city-map-section {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.map-container {
+    max-width: 100%;
+}
+
+.map-display {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    width: 100%;
+}
+
+/* 観光スポット */
+.tourism-spots {
+    padding: 4rem 0;
+}
+
+.spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.spot-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.spot-image-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spot-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.spot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-spot:hover .spot-img {
+    transform: scale(1.05);
+}
+
+.spot-category {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #047857;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+.spot-content {
+    padding: 1.5rem;
+}
+
+.spot-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.spot-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.spot-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.spot-access,
+.spot-time {
+    color: #2563eb;
+    font-weight: 500;
+}
+
+/* イベント */
+.events {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateX(8px);
+}
+
+.event-date {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.event-month {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.event-day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.event-content {
+    flex-grow: 1;
+}
+
+.event-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.event-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.event-location {
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* グルメ */
+.gourmet {
+    padding: 4rem 0;
+}
+
+.gourmet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.gourmet-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gourmet-card:hover {
+    transform: scale(1.05);
+}
+
+.gourmet-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.gourmet-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.gourmet-description {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* アクセス */
+.access {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+
+.access-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.access-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.access-method {
+    padding: 1.5rem;
+    border-left: 4px solid #2563eb;
+    background-color: #f8fafc;
+    border-radius: 0 8px 8px 0;
+}
+
+.access-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.access-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.access-list li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.access-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-size: 0.75rem;
+}
+
+/* 観光案内所 */
+.tourist-info {
+    padding: 4rem 0;
+}
+
+.info-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.info-item strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.info-services h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.services-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.services-list li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.services-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: 600;
+}
+
+/* レスポンシブデザイン（観光ページ） */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 2rem 0;
+    }
+
+    .tourism-hero {
+        background-attachment: scroll;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .map-display {
+        min-height: 300px;
+    }
+
+    .spots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spot-image,
+    .spot-image-placeholder {
+        height: 150px;
+    }
+
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .event-date {
+        min-width: auto;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .gourmet-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .access-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .spot-card,
+    .event-card,
+    .gourmet-card {
+        margin: 0 -10px;
+    }
+
+    .spot-image,
+    .spot-image-placeholder {
+        height: 120px;
+    }
+
+    .spot-category {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .access-content,
+    .info-content {
+        margin: 0 -10px;
+    }
+}
